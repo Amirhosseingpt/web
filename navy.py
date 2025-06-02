@@ -18,9 +18,6 @@ df = df.replace([np.inf, -np.inf], np.nan).dropna()
 label_encoder = LabelEncoder()
 df['Label'] = label_encoder.fit_transform(df['Label'])
 
-# جدا کردن ویژگی‌ها و هدف
-X = df.drop('Label', axis=1)
-y = df['Label']
 
 # نرمال‌سازی داده‌ها
 scaler = MinMaxScaler()
